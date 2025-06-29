@@ -1,0 +1,36 @@
+# SBT and Scala
+/target/
+/project/target/
+/.bsp/
+/.metals/
+/.idea/
+.DS_Store
+*.iml
+*.log
+*.class
+*.tasty
+*.sjsir
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# System Files
+Thumbs.db
+
+# Scala.js output
+*.js
+*.js.map
+
+# Metals
+.metals/
+.bloop/
+
+# IntelliJ IDEA
+*.cache
+*.properties
