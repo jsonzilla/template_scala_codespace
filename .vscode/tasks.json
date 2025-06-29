@@ -1,0 +1,264 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sbt: compile",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["compile"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "owner": "scala",
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^\\[error\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "message": 4
+                }
+            },
+            "detail": "Compile Scala sources"
+        },
+        {
+            "label": "sbt: run",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["run"],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "owner": "scala",
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^\\[error\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "message": 4
+                }
+            },
+            "detail": "Run the main Scala application"
+        },
+        {
+            "label": "sbt: test",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["test"],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "owner": "scala",
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^\\[error\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "message": 4
+                }
+            },
+            "detail": "Run all tests"
+        },
+        {
+            "label": "sbt: clean",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["clean"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Clean compiled files and build artifacts"
+        },
+        {
+            "label": "sbt: fastLinkJS",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["fastLinkJS"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "owner": "scala",
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^\\[error\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "message": 4
+                }
+            },
+            "detail": "Build Scala.js output (development mode)"
+        },
+        {
+            "label": "sbt: fullLinkJS",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["fullLinkJS"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "owner": "scala",
+                "fileLocation": "relative",
+                "pattern": {
+                    "regexp": "^\\[error\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "message": 4
+                }
+            },
+            "detail": "Build optimized Scala.js output (production mode)"
+        },
+        {
+            "label": "sbt: console",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["console"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Start Scala REPL console"
+        },
+        {
+            "label": "sbt: reload",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["reload"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Reload sbt build configuration"
+        },
+        {
+            "label": "sbt: ~compile",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["~compile"],
+            "group": "build",
+            "isBackground": true,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [
+                {
+                    "pattern": [
+                        {
+                            "regexp": "^\\[error\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)$",
+                            "file": 1,
+                            "line": 2,
+                            "column": 3,
+                            "message": 4
+                        }
+                    ],
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "^\\[info\\]\\s+Compiling",
+                        "endsPattern": "^\\[success\\]|^\\[error\\]"
+                    }
+                }
+            ],
+            "detail": "Watch mode: automatically recompile on file changes"
+        },
+        {
+            "label": "sbt: ~fastLinkJS",
+            "type": "shell",
+            "command": "sbt",
+            "args": ["~fastLinkJS"],
+            "group": "build",
+            "isBackground": true,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [
+                {
+                    "pattern": [
+                        {
+                            "regexp": "^\\[error\\]\\s+(.*):(\\d+):(\\d+):\\s+(.*)$",
+                            "file": 1,
+                            "line": 2,
+                            "column": 3,
+                            "message": 4
+                        }
+                    ],
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "^\\[info\\]\\s+Compiling|^\\[info\\]\\s+Fast",
+                        "endsPattern": "^\\[success\\]|^\\[error\\]"
+                    }
+                }
+            ],
+            "detail": "Watch mode: automatically rebuild Scala.js on file changes"
+        }
+    ]
+}

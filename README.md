@@ -12,18 +12,34 @@
 1. **Open in GitHub Codespaces**  
    Click the green "Code" button in GitHub, then "Open with Codespaces".
 
-2. **Run Scala code (JVM):**
+2. **Use VS Code Tasks** (Recommended)  
+   Access common sbt operations through VS Code:
+   - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac) to open Command Palette
+   - Type "Tasks: Run Task" and select it
+   - Choose from available tasks:
+     - **sbt: compile** - Compile Scala sources
+     - **sbt: run** - Run the main Scala application
+     - **sbt: test** - Run all tests
+     - **sbt: clean** - Clean compiled files and build artifacts
+     - **sbt: fastLinkJS** - Build Scala.js output (development mode)
+     - **sbt: fullLinkJS** - Build optimized Scala.js output (production mode)
+     - **sbt: console** - Start Scala REPL console
+     - **sbt: reload** - Reload sbt build configuration
+     - **sbt: ~compile** - Watch mode: automatically recompile on file changes
+     - **sbt: ~fastLinkJS** - Watch mode: automatically rebuild Scala.js on file changes
+
+3. **Run Scala code manually (JVM):**
    ```
    sbt run
    ```
 
-3. **Build Scala.js output:**
+4. **Build Scala.js output manually:**
    ```
    sbt fastLinkJS
    ```
    Output will be in `target/scala-3.3.3/scalajs-example-fastopt/main.js`.
 
-4. **Edit and develop!**  
+5. **Edit and develop!**  
    The Metals extension provides IDE features.
 
 ## Project layout
