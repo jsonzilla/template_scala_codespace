@@ -1,0 +1,13 @@
+{
+  "name": "Scala 3 + sbt + Scala.js",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "sbt version",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "scalameta.metals"
+  ]
+}
